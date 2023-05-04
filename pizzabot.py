@@ -3,11 +3,24 @@ import random
 from random import randint
 
 
-# names to be randomly selected
 names = ["Doug", "Douglas", "Dougington", "Dougie", "Duggie", "Doogie", "Dougalasa", "Dùbhghlas", "Thrangott the Devourer", "Gab"]
 
-num = randint(0,9)
+def  welcome():
+  '''
+  Purpose: To generate a random name from the list and print out a welcome message
+  Parameters: None
+  Resturns: None
+  '''
+  num = randint(0,9)
+  name = (names[num])
+  print("Welcome to ∙ ⋆ ★ Doug's Dream Pizzas™ ★ ⋆ ∙")
+  print("My name is", name)
+  print("How may I help you?")
 
-name = (names[num])
-
-print(name)
+def main():
+  '''
+  Purpose: To run all functions
+  Parameters: None
+  Returns: None
+  '''
+  welcome()
