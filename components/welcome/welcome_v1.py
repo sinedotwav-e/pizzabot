@@ -1,5 +1,4 @@
 # bugs
-
 # welcome message with randomly generated name
 import random
 from random import randint
