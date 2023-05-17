@@ -1,6 +1,5 @@
 # bugs
-# program won't work with any invalid response
-# (continue to ver.2)
+# invalid input triggers else statement, but does not let the user try again
 
 # menu for selecting either pickup or delivery
 
@@ -15,3 +14,6 @@ if delpick == "p":
 
 elif delpick == "d":
     print("Delivery!")
+
+else:
+    print("Invalid response, please try again")
