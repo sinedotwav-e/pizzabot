@@ -1,6 +1,5 @@
 # bugs
 # program won't work with any invalid response
-# (continue to ver.2)
 
 # menu for selecting either pickup or delivery
 
