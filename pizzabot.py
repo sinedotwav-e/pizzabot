@@ -24,6 +24,7 @@ def deliverypickup():
   print("Would you like to order for pick-up or delivery?")
   print("Enter 1 for pick-up")
   print("Enter 2 for delivery (will incur a $3 surcharge)")
+  print("")
 
   # while loop to avoid invalid inputs
   while True:
@@ -43,11 +44,14 @@ def deliverypickup():
         print("Number must be 1 or 2, please try again")
         print("Enter 1 for pick-up")
         print("Enter 2 for delivery (will incur a $3 surcharge)")
+        print("")
+        
 
     except ValueError:
       print("Invalid input, please try again")
       print("Enter 1 for pick-up")
       print("Enter 2 for delivery (will incur a $3 surcharge)")
+      print("")
 
 # runs all functions
 def main():
