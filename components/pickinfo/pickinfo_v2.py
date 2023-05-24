@@ -1,6 +1,6 @@
 # bugs
 # numbers valid in name entry and letters valid in number entry
-# echo of inputs
+# echo of inputs is odd
 
 # information to be collected after the pickup option is selected
 

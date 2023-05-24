@@ -1,9 +1,13 @@
 # bugs
+# numbers valid in name entry and letters valid in number entry
+# echo of inputs is odd
 
 # information to be collected after the pickup option is selected
 
+# customer details dictionary
 userdetails = {}
 
+# basic intructions
 print("Please enter your information for pick-up...")
 
 # customer name
@@ -31,5 +35,4 @@ while not valid:
   else:
     print("Input cannot be blank.")
 
-print(userdetails['name'])
-print(userdetails['phone'])
+print(userdetails)
