@@ -63,7 +63,8 @@ def deliverypickup():
           break
 
         elif delpick == 2:
-          print("Delivery!")
+          print("Ordering for delivery...")
+          delinfo()
           break
 
       else:
@@ -78,6 +79,7 @@ def deliverypickup():
       print("Enter 1 for pick-up")
       print("Enter 2 for delivery (will incur a $3 surcharge)")
 
+# component that collects user data when pick-up is selected
 def pickinfo():
   query = ("Please enter your name > ")
   userdetails['name'] = notblank(query)
@@ -89,6 +91,36 @@ def pickinfo():
   # print(userdetails['name'])
   # print(userdetails['phone'])
   print(userdetails)
+
+def delinfo():
+  '''
+  Purpose: To collect user data and store in a dictionary for later use when delivery is selected
+  Parameters: None
+  Returns: None
+  '''
+  query = ("Please enter your name > ")
+  userdetails['name'] = notblank(query)
+
+  query = ("Please enter your phone number > ")
+  userdetails['phone'] = notblank(query)
+
+  query = ("Please enter your house number > ")
+  userdetails['house'] = notblank(query)
+
+  query = ("Please enter your street name > ")
+  userdetails['street'] = notblank(query)
+
+  query = ("Please enter your suburb > ")
+  userdetails['suburb'] = notblank(query)
+
+  # print user details
+  # print(userdetails['name'])
+  # print(userdetails['phone'])
+  # print(userdetails['house'])
+  # print(userdetails['street'])
+  # print(userdetails['suburb'])
+  print(userdetails)
+
 
 # runs all functions
 def main():
