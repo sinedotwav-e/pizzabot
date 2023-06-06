@@ -81,6 +81,12 @@ def deliverypickup():
 
 # component that collects user data when pick-up is selected
 def pickinfo():
+  '''
+  Purpose: To collect user data and store in a dictionary for later use when pick-up is selected
+  Parameters: None
+  Returns: None
+  Bugs: Name input allows numbers, vice versa
+  '''
   query = ("Please enter your name > ")
   userdetails['name'] = notblank(query)
 
@@ -97,6 +103,7 @@ def delinfo():
   Purpose: To collect user data and store in a dictionary for later use when delivery is selected
   Parameters: None
   Returns: None
+  Bugs: Same issue as pickinfo()
   '''
   query = ("Please enter your name > ")
   userdetails['name'] = notblank(query)
@@ -133,3 +140,5 @@ def main():
   deliverypickup()
 
 main()
+
+# Lesson 16 Part 1 7:10/32:48
