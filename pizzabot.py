@@ -13,8 +13,23 @@ names = ["Doug", "Douglas", "Dougington", "Dougie", "Duggie", "Doogie", "Dougala
 # customer details dictionary
 userdetails = {}
 
-# function for blank inputs
+# pizza name
+pizzas = ['Margherita', 'Pepperoni', 'Hawaiian', 'Cheese', 'Italian', 'Veggie', 'Vegan',
+          'Chicken Deluxe', 'Mega Meat Lovers', 'Seafood Deluxe', 'Apricot Chicken Deluxe', 'BBQ Chicken Deluxe', ]
 
+# pizza prices
+prices =  [8.50, 8.50, 8.50, 8.50, 8.50, 8.50, 8.50, 
+           13.50, 13.50, 13.50, 13.50, 13.50, ]
+
+# blank space code (bs = blank space lb = linebreak)
+def bs():
+  lb = 50
+
+  while lb >= 0:
+    print("")
+    lb = lb - 1
+
+# function for blank inputs
 def notblank(query):
   valid = False
   while not valid:
@@ -26,7 +41,7 @@ def notblank(query):
   
     else:
       print("")
-      print("Entry cannot be blank, try again.")
+      print("! Entry cannot be blank, try again. !")
 
 
 # welcome text
@@ -49,6 +64,7 @@ def deliverypickup():
   print("Would you like to order for pick-up or delivery?")
   print("Enter 1 for pick-up")
   print("Enter 2 for delivery (will incur a $3 surcharge)")
+  print("")
 
   # while loop to avoid invalid inputs
   while True:
@@ -60,22 +76,24 @@ def deliverypickup():
         if delpick == 1:
           print("Ordering for pick-up...")
           pickinfo()
+          print("")
           break
 
         elif delpick == 2:
           print("Ordering for delivery...")
           delinfo()
+          print("")
           break
 
       else:
         print("")
-        print("Number must be 1 or 2, please try again")
+        print("! Number must be 1 or 2, please try again !")
         print("Enter 1 for pick-up")
         print("Enter 2 for delivery (will incur a $3 surcharge)")
 
     except ValueError:
       print("")
-      print("Invalid input, please try again")
+      print("! Invalid input, please try again !")
       print("Enter 1 for pick-up")
       print("Enter 2 for delivery (will incur a $3 surcharge)")
 
@@ -93,10 +111,7 @@ def pickinfo():
   query = ("Please enter your phone number > ")
   userdetails['phone'] = notblank(query)
 
-  # print user details
-  # print(userdetails['name'])
-  # print(userdetails['phone'])
-  print(userdetails)
+  print("")
 
 def delinfo():
   '''
@@ -120,14 +135,23 @@ def delinfo():
   query = ("Please enter your suburb > ")
   userdetails['suburb'] = notblank(query)
 
-  # print user details
-  # print(userdetails['name'])
-  # print(userdetails['phone'])
-  # print(userdetails['house'])
-  # print(userdetails['street'])
-  # print(userdetails['suburb'])
-  print(userdetails)
+  print("")
 
+# menu of pizzas
+def menu():
+    pizzatotal = 12
+
+    print("How many pizzas would you like (max. 5)")
+    pizza_num = int(input())
+
+    print("")
+    print("· ⋆ ★ The Menu ★ ⋆ ·")
+
+    for count in range (pizzatotal):
+        print("{} {} ${:.2f}" .format(count+1, pizzas[count], prices[count]))
+    
+    print("")
+        
 
 # runs all functions
 def main():
@@ -138,6 +162,7 @@ def main():
   '''
   welcome()
   deliverypickup()
+  menu()
 
 main()
 
