@@ -21,6 +21,3 @@ def menu():
         print("{} {} ${:.2f}" .format(count+1, pizzas[count], prices[count]))
 
 menu()
-
-# make v3 on powerpoint (implemented into main program)
-# Lesson 17 18:00/23:02

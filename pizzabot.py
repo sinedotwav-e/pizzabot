@@ -151,7 +151,6 @@ def menu():
         print("{} {} ${:.2f}" .format(count+1, pizzas[count], prices[count]))
     
     print("")
-        
 
 # runs all functions
 def main():
