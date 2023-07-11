@@ -19,16 +19,22 @@ def menu():
 menu()
 
 # total number of ordered pizzas
-pizzas_num = 0 
+pizzasnum = 0 
 
-pizzas_num = int(input("How many pizzas would you like to order? > "))
+pizzasnum = int(input("How many pizzas would you like to order? > "))
 
-print(pizzas_num)
+print(pizzasnum)
 
 # choose pizza from menu
 print("Please select a pizza using the index number (the one on the far left)")
 
-for item in range(pizzas_num):
-    while pizzas_num > 0:
-        order = int(input())
-        ordlist.apped(pizzas[order])
+for item in range(pizzasnum):
+    while pizzasnum > 0:
+        ordnum = int(input())
+        ordlist.append(pizzas[ordnum])
+        ordcost.append(prices[ordnum])
+        print("You have ordered", (pizzas[ordnum]), "pizza")
+        pizzasnum = pizzasnum - 1
+
+print(ordlist)
+print(ordcost)
